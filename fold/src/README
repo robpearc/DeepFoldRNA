@@ -1,0 +1,23 @@
+/*******************************************************************************************
+ *       ____                  ______      __    __
+ *      / __ \___  ___  ____  / ____/___  / /___/ /
+ *     / / / / _ \/ _ \/ __ \/ /_  / __ \/ / __  /
+ *    / /_/ /  __/  __/ /_/ / __/ / /_/ / / /_/ /
+ *   /_____/\___/\___/ .___/_/    \____/_/\__,_/
+ *                  /_/
+ *
+ *  A program for de novo RNA tertiary structure 
+ *  prediction guided by potentials from deep 
+ *  learning
+ *
+ *  This program was written by Robin Pearce at the Zhang Lab
+ *  Department of Computational Medicine and Bioinformatics 
+ *  University of Michigan 
+ *           
+ *  Please report bugs and questions to robpearc@umich.edu
+ *
+*******************************************************************************************/
+
+To compile the program cd into the src directory and type g++ -static -std=c++0x -O3 -ffast-math -lm -o DeepFold Main.cpp
+
+Then copy the compiled program into the directory <DeepFoldRNA_HOME_DIR>/fold
