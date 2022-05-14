@@ -74,7 +74,7 @@ class Pred_Network(nn.Module):
         recycle = False
         with torch.no_grad():
             for i in range(cycles-1):
-                msa_recycle, pair_recycle, seq_recycle = self.iteration(features,msa_recycle,pair_recycle,seq_prev,recycle)
+                msa_recycle, pair_recycle, seq_recycle = self.iteration(features,msa_recycle,pair_recycle,seq_recycle,recycle)
                 recycle = True
         
         msa_final, pair_final, seq_final = self.iteration(features,msa_recycle,pair_recycle,seq_recycle,recycle)

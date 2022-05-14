@@ -71,7 +71,7 @@ class Pred_Network(nn.Module):
                 msa_recycle, pair_recycle, seq_recycle = self.iteration(features, msa_recycle, pair_recycle, seq_recycle, recycle)
                 recycle = True
 
-        msa_final, pair_final, seq_final = self.iteration(features, msa_prev, pair_prev, seq_prev, recycle)
+        msa_final, pair_final, seq_final = self.iteration(features, msa_recycle, pair_recycle, seq_recycle, recycle)
         
         output = {}
         output["geometry_head"] = self.geometry_head(pair_final)
