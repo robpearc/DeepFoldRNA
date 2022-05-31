@@ -31,7 +31,7 @@ class Input_Embedder(nn.Module):
 
     def compute_position_1(self,device):
         pos = torch.arange(self.max_seq_len)
-        rel_pos = ((pos[:,None] & (1 << torch.arange(self.rel_pos_1d)))) > 0
+        rel_pos = ((pos[:,None] & (1 << np.arange(self.rel_pos_1d)))) > 0
         
         return rel_pos.float().to(device)
 
